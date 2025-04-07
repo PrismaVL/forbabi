@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fff5f5;
+    font-family: 'Indie Flower', cursive;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+    background-color: #ffebee;
+    padding: 30px;
+    border-radius: 20px;
+    border: 3px solid #ff6b81;
+    box-shadow: 0 8px 20px rgba(255, 107, 129, 0.3);
+    max-width: 400px;
+    width: 90%;
+}
+
+.header_text {
+    font-size: clamp(24px, 5vw, 36px);
+    color: #ff6b81;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(255, 107, 129, 0.2);
+}
+
+.response_text {
+    font-size: clamp(18px, 4vw, 24px);
+    color: #ff6b81;
+    margin-top: 20px;
+}
+
+.gif_container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background: transparent;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 24px;
+    font-size: clamp(16px, 4vw, 20px);
+    border: 2px solid #ff6b81;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #ff6b81;
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    box-shadow: 0 4px 10px rgba(255, 107, 129, 0.3);
+    min-width: 100px;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #ff6b81;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 107, 129, 0.4);
+}
+
+#noButton {
+    background-color: #ff4757;
+    border-color: #ff4757;
+}
+
+#noButton:hover {
+    background-color: white;
+    color: #ff4757;
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.wiggle {
+    animation: wiggle 0.5s ease-in-out;
+}
+
+@keyframes heartFade {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(1.5); }
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    transform: translate(-50%, -50%);
+    animation: heartFade 1s ease-out forwards;
+    background-color: #ff6b81;
+    border-radius: 50%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .buttons {
+        gap: 10px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+    }
+}
